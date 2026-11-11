@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crafted Partners · Consultoría digital</title>
+<meta name="description" content="Detectamos qué te está costando clientes y lo arreglamos: web, Google, redes y anuncios. Auditoría gratis de tu negocio.">
+<link rel="canonical" href="https://craftedpartners.es/">
+<meta property="og:title" content="Crafted Partners · Consultoría digital">
+<meta property="og:description" content="Auditoría gratis de tu negocio.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#08090A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090A'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='26' fill='%23C6FF4D'%3ECP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08090A; --txt:#EDEEF0; --mut:#8A8F98; --dim:#5C616A; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+  --lima:#C6FF4D; --lima-glow:rgba(198,255,77,.35); --verde:#22C55E;
+  --sans:'Inter', system-ui, -apple-system, sans-serif; --mono:'JetBrains Mono', ui-monospace, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--lima);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+/* cabecera */
+header{position:sticky;top:0;z-index:20;background:rgba(8,9,10,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:20px;height:68px}
+.brand{font-weight:700;font-size:17px;letter-spacing:-.01em;margin-right:auto;display:flex;align-items:center;gap:10px}
+.brand i{width:22px;height:22px;border-radius:6px;background:var(--lima);display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;color:#08090A}
+.avail{display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:500;color:var(--txt)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--verde);flex:none;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 6px 1px rgba(34,197,94,.6),0 0 0 0 rgba(34,197,94,.5)}70%{box-shadow:0 0 6px 1px rgba(34,197,94,.6),0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 6px 1px rgba(34,197,94,.6),0 0 0 0 rgba(34,197,94,0)}}
+.avail .s{display:none}
+.hbtn{padding:9px 16px;font-size:14px;font-weight:600;color:#08090A;background:var(--lima);border-radius:8px;white-space:nowrap}
+
+/* portada */
+.hero{padding-top:clamp(72px,13vh,140px);padding-bottom:clamp(64px,10vh,110px)}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);padding:7px 12px;border:1px solid var(--line2);border-radius:999px}
+.tag b{width:6px;height:6px;border-radius:50%;background:var(--lima);box-shadow:0 0 10px var(--lima-glow)}
+h1{margin-top:28px;font-weight:600;font-size:clamp(40px,6.6vw,80px);line-height:1.02;letter-spacing:-.045em;max-width:15ch}
+h1 em{font-style:normal;color:var(--lima)}
+.sub{margin-top:24px;font-size:clamp(17px,1.6vw,20px);color:#B4B9C1;max-width:50ch}
+.guar{margin-top:14px;font-size:clamp(16px,1.5vw,18px);font-weight:600;color:var(--txt)}
+.ctas{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;font-weight:600;font-size:16px;color:#08090A;background:var(--lima);border-radius:10px;box-shadow:0 0 0 1px rgba(198,255,77,.4),0 10px 40px -10px var(--lima-glow);transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 0 0 1px rgba(198,255,77,.6),0 14px 50px -10px var(--lima-glow)}
+.btn svg{transition:transform .2s}.btn:hover svg{transform:translateX(3px)}
+.alt{font-size:15px;color:var(--mut);border-bottom:1px solid var(--line2);padding-bottom:2px}
+.alt:hover{color:var(--txt)}
+
+/* bloque 2 */
+.how{padding:clamp(56px,9vh,96px) 0 clamp(64px,10vh,100px);border-top:1px solid var(--line)}
+.lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+h2{margin-top:12px;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.035em;max-width:20ch}
+.grid{margin-top:36px;display:grid;grid-template-columns:1fr 1.15fr;gap:20px;align-items:stretch}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+.step .n{font-family:var(--mono);font-size:13px;color:var(--lima);padding-top:2px}
+.step h3{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.step p{margin-top:4px;font-size:15px;color:var(--mut)}
+.step .chip{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--lima);vertical-align:2px}
+.ex{border:1px solid var(--line2);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));padding:22px;display:flex;flex-direction:column}
+.ex-h{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--mut)}
+.ex-h span:last-child{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--line2);border-radius:6px}
+.ex ul{list-style:none;margin-top:16px;display:grid;gap:12px}
+.ex li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:15px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.ex li:last-child{border-bottom:none;padding-bottom:0}
+.ex li b{font-family:var(--mono);font-size:11px;font-weight:500;color:#08090A;background:var(--lima);border-radius:4px;padding:3px 6px;margin-top:2px}
+.ex li span{color:var(--txt)}
+.ex li small{display:block;color:var(--mut);font-size:13.5px;margin-top:2px}
+.ex .end{margin-top:auto;padding-top:20px}
+.ex .btn{width:100%}
+.closing{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--mut)}
+.closing span{display:flex;align-items:center;gap:8px}
+.closing span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--lima)}
+
+footer{border-top:1px solid var(--line);padding:22px 0 96px;font-size:12.5px;color:var(--dim)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer nav{display:flex;gap:18px}
+footer button:hover{color:var(--txt)}
+
+.mcta{display:none}
+.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.7)}
+.modal.open{display:flex}
+.modal .box{width:min(560px,100%);max-height:85vh;overflow:auto;background:#111214;border:1px solid var(--line2);border-radius:14px;padding:30px;position:relative}
+.modal h3{font-size:22px;font-weight:600;margin-bottom:14px}
+.modal p{color:var(--mut);font-size:14px;margin-bottom:10px}
+.modal p b{color:var(--txt)}
+.modal .x{position:absolute;top:12px;right:16px;font-size:24px;color:var(--mut)}
+
+.pain{padding:clamp(48px,8vh,88px) 0;border-top:1px solid var(--line)}
+.pains{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:20px 22px;border:1px solid var(--line2);border-radius:12px;background:rgba(255,255,255,.02);font-size:16.5px;font-weight:500;transition:border-color .2s,background .2s,transform .15s}
+.p svg{color:var(--lima);flex:none;transition:transform .2s}
+.p:hover{border-color:var(--lima);background:rgba(198,255,77,.06)}
+.p:hover svg{transform:translateX(3px)}
+.pnote{margin-top:16px;font-size:14.5px;color:var(--mut)}
+body.stripe .p{border-radius:18px;background:rgba(10,20,14,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+@media (max-width:640px){.pains{grid-template-columns:1fr}}
+.menu{display:flex;gap:22px;font-size:14.5px;color:var(--mut)}
+.menu a:hover{color:var(--txt)}
+.lbl.big{font-size:14.5px;letter-spacing:.1em;color:var(--lima)}
+h2 em{font-style:normal;color:var(--lima)}
+h2.light{font-weight:400}
+h2.light em{font-weight:600}
+.how h2{font-size:clamp(32px,4.4vw,54px)}
+.p{width:100%;text-align:left;justify-content:flex-start;cursor:pointer}
+.p i{width:22px;height:22px;flex:none;border:1.5px solid var(--line2);border-radius:6px;display:grid;place-items:center;transition:all .2s}
+.p[aria-pressed="true"]{border-color:var(--lima);background:rgba(198,255,77,.07)}
+.p[aria-pressed="true"] i{background:var(--lima);border-color:var(--lima)}
+.p[aria-pressed="true"] i::after{content:"";width:9px;height:5px;border-left:2px solid #08090A;border-bottom:2px solid #08090A;transform:translateY(-1px) rotate(-45deg)}
+.pcta{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.pcta[hidden]{display:none}
+.asg{width:100%;display:flex;align-items:center;gap:9px;font-size:14px;color:var(--mut)}
+.asg .d{width:7px;height:7px;border-radius:50%;background:var(--lima)}
+.pains .p:last-child:nth-child(odd){grid-column:1/-1}
+.step p strong{display:block;margin-top:8px;color:var(--txt);font-weight:600}
+html{scroll-padding-top:76px}
+/* ===== ESTILO A · tipo Linear / Vercel ===== */
+body.linear .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%)}
+body.linear .glow{position:fixed;left:50%;top:-260px;width:900px;height:520px;transform:translateX(-50%);z-index:0;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(198,255,77,.12),transparent)}
+body.linear .btn,body.linear .hbtn{border-radius:8px}
+
+/* ===== ESTILO B · tipo Stripe ===== */
+body.stripe{--bg:#07100B}
+body.stripe .grid-bg{display:none}
+body.stripe .glow{position:fixed;inset:-20% -10% auto -10%;height:110vh;z-index:0;pointer-events:none;filter:blur(70px);opacity:.5;
+  background:
+   radial-gradient(38% 42% at 88% 30%, rgba(198,255,77,.30), transparent 70%),
+   radial-gradient(35% 40% at 78% 12%, rgba(34,197,94,.35), transparent 70%),
+   radial-gradient(45% 50% at 62% 58%, rgba(16,185,129,.22), transparent 70%),
+   radial-gradient(30% 35% at 20% 85%, rgba(56,189,248,.12), transparent 70%);
+  animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(3%,4%,0) scale(1.06)}}
+body.stripe .hero h1{font-weight:700;letter-spacing:-.04em}
+body.stripe .step,body.stripe .ex{border-radius:20px;background:rgba(10,20,14,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:rgba(255,255,255,.1);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+body.stripe .btn,body.stripe .hbtn{border-radius:999px}
+body.stripe .how{border-top-color:transparent}
+body.stripe .tag{background:rgba(255,255,255,.04)}
+
+@media (max-width:860px){.grid{grid-template-columns:1fr}.menu a+a{display:none}}
+@media (max-width:640px){
+  .menu{display:none}
+  body.stripe .glow{animation:none;opacity:.4}
+  body.stripe .step,body.stripe .ex,body.stripe .p{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(14,24,18,.92)}
+  .wrap{padding:0 20px}
+  header .wrap{height:60px;gap:12px}
+  .hbtn{display:none}
+  .avail{font-size:13.5px}
+  header .avail .l{display:none} header .avail .s{display:inline}
+  .hero{padding-top:48px;padding-bottom:56px}
+  .btn{width:100%}
+  .ctas{gap:16px}
+  .alt{margin:0 auto}
+  .mcta{display:flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;justify-content:center;
+    padding:15px;font-weight:600;font-size:16px;color:#08090A;background:var(--lima);border-radius:10px;box-shadow:0 12px 30px -10px rgba(0,0,0,.8);transform:translateY(160%);transition:transform .3s}
+  body.stripe .mcta{border-radius:999px}
+  .mcta.show{transform:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== V21 ===== */
+.ok{margin-top:22px;padding:22px 24px;border:1px solid rgba(198,255,77,.45);border-radius:18px;background:rgba(198,255,77,.06)}
+.ok[hidden]{display:none}
+.okt{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:600}
+.tick{width:22px;height:22px;border-radius:50%;background:var(--lima);flex:none;position:relative}
+.tick::after{content:"";position:absolute;left:6px;top:6px;width:9px;height:5px;border-left:2px solid #08090A;border-bottom:2px solid #08090A;transform:rotate(-45deg)}
+.oks{margin-top:10px;font-size:14.5px;color:var(--mut)}
+.okb{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px}
+.chipb{padding:10px 18px;border:1px solid var(--line2);border-radius:999px;font-size:14.5px;font-weight:600}
+.chipb:hover{border-color:var(--lima)}
+/* ===== V20 ===== */
+header .wrap{justify-content:space-between}
+.brand{margin-right:0;white-space:nowrap}
+.htag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--txt);padding:8px 14px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.04)}
+.htag b,.svc b{width:7px;height:7px;border-radius:50%;background:var(--lima);box-shadow:0 0 10px var(--lima-glow);flex:none}
+.hero{padding-top:clamp(56px,10vh,110px)}
+h1{margin-top:0}
+h1 .l2{display:block;color:var(--lima)}
+.svcs{margin-top:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:620px}
+.svc{justify-content:center}
+.svc{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.04)}
+.sec{padding:clamp(56px,9vh,96px) 0;border-top:1px solid var(--line)}
+.sec h2.big{font-size:clamp(32px,4.4vw,54px)}
+.finds{margin-top:30px;border:1px solid var(--line2);border-radius:20px;background:rgba(10,20,14,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:hidden}
+.fi{display:grid;grid-template-columns:112px 1fr;gap:18px;align-items:start;padding:20px 24px;border-bottom:1px solid var(--line)}
+.fi:last-child{border-bottom:none}
+.fi b{justify-self:start;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.06em;color:#08090A;background:var(--lima);border-radius:5px;padding:4px 8px;margin-top:2px}
+.fi span{font-size:16.5px;font-weight:500}
+.fi strong,.p strong{font-weight:700;color:var(--txt)}
+.fi small strong{color:var(--lima);font-weight:600}
+.fi small{display:block;margin-top:4px;color:var(--mut);font-size:14.5px;font-weight:400}
+.steps3{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.steps3 .step{display:block;border-radius:20px;background:rgba(10,20,14,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);padding:24px}
+.steps3 .n{display:block;margin-bottom:12px}
+.steps3 h3{font-size:20px}
+.steps3 p{margin-top:10px;font-size:15.5px;color:var(--mut);line-height:1.6}
+.steps3 p strong{display:inline;margin:0;color:var(--txt);font-weight:600}
+.final{margin-top:28px;justify-content:flex-start;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+@media (max-width:860px){.steps3{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .htag{font-size:10.5px;padding:6px 10px;gap:7px;letter-spacing:.06em}
+  .brand{font-size:16px}
+  .svcs{grid-template-columns:repeat(2,1fr);max-width:none}
+  .fi{grid-template-columns:96px 1fr;gap:14px;padding:18px}
+  .fi span{font-size:15.5px}
+  .finds,.steps3 .step{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(14,24,18,.92)}
+}
+</style>
+</head>
+<body class="stripe">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#"><i>CP</i>Crafted Partners</a>
+    <span class="htag"><b></b>Consultoría digital</span>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <h1>Cada día alguien busca lo que haces. Y elige a tu competencia.<span class="l2">Hacemos que te elija a ti.</span></h1>
+    <p class="sub">Primero vemos <strong style="color:var(--txt)">por qué se va con otro</strong>. Después <strong style="color:var(--txt)">lo arreglamos nosotros</strong>. Tú no tienes que tocar nada.</p>
+    <div class="svcs"><span class="svc"><b></b>Web</span><span class="svc"><b></b>Google</span><span class="svc"><b></b>Redes</span><span class="svc"><b></b>Anuncios</span></div>
+    <p class="guar">Nada por adelantado. Pagas cuando ves el trabajo terminado.</p>
+    <div class="ctas">
+      <a class="btn" data-go href="#">Quiero mi auditoría gratis <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="alt" data-mail href="#">o responde «sí» a mi email</a>
+    </div>
+  </section>
+
+  <section class="sec pain" id="ayuda">
+    <div class="wrap">
+      <p class="lbl big">Empecemos por ti</p>
+      <h2 class="light big">¿En qué te podemos <em>ayudar</em>?</h2>
+      <div class="pains" role="group" aria-label="Lo que te pasa">
+        <button type="button" class="p" aria-pressed="false"><i aria-hidden="true"></i><span>Casi <strong>no me encuentran</strong> en internet</span></button>
+        <button type="button" class="p" aria-pressed="false"><i aria-hidden="true"></i><span>Tengo <strong>pocas reseñas</strong> en Google</span></button>
+        <button type="button" class="p" aria-pressed="false"><i aria-hidden="true"></i><span><strong>No tengo tiempo</strong> para redes ni anuncios</span></button>
+        <button type="button" class="p" aria-pressed="false"><i aria-hidden="true"></i><span><strong>No sé por dónde empezar</strong> en internet</span></button>
+        <button type="button" class="p" aria-pressed="false"><i aria-hidden="true"></i><span>Mi web <strong>no me trae clientes</strong></span></button>
+        <button type="button" class="p" aria-pressed="false"><i aria-hidden="true"></i><span>Otra cosa</span></button>
+      </div>
+      <div class="final">
+        <a class="btn" data-go href="#">Quiero mi auditoría gratis <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="alt" id="painMail" href="#">o respóndeme al email</a>
+      </div>
+      <div class="ok" id="okBox" hidden>
+        <p class="okt"><span class="tick" aria-hidden="true"></span>Hecho. Te escribimos en menos de 24 h al email donde te contactamos.</p>
+        <p class="oks">¿Prefieres que te contactemos de otra forma?</p>
+        <div class="okb"><a class="chipb" id="okWa" href="#" target="_blank" rel="noopener">WhatsApp</a><a class="chipb" id="okCall" href="#" target="_blank" rel="noopener">Que me llaméis</a></div>
+      </div>
+      <div class="ok" id="askBox" hidden>
+        <p class="okt">¿Por dónde te enviamos tu auditoría?</p>
+        <div class="okb"><a class="chipb" id="askWa" href="#" target="_blank" rel="noopener">WhatsApp</a><a class="chipb" id="askMail" href="#">Email</a></div>
+      </div>
+      <div class="closing"><span>Contacto asegurado en menos de 24 h</span><span>Sin permanencia</span><span>Precio cerrado antes de empezar</span><span>La auditoría es tuya, trabajes con nosotros o no</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="ejemplo">
+    <div class="wrap">
+      <p class="lbl big">Lo más habitual</p>
+      <h2 class="big">Lo que solemos encontrar.</h2>
+      <div class="finds">
+        <div class="fi"><b>WEB</b><span>Desde el móvil <strong>no pueden ponerse en contacto</strong> contigo<small>→ <strong>Contacto en un toque:</strong> WhatsApp, llamada o email</small></span></div>
+        <div class="fi"><b>WEB</b><span>Tu web <strong>no explica por qué elegirte</strong> a ti<small>→ Lo que te hace mejor, <strong>claro en 5 segundos</strong></small></span></div>
+        <div class="fi"><b>GOOGLE</b><span>Las <strong>opiniones de tus clientes</strong> no se ven<small>→ Tus <strong>mejores testimonios</strong>, en la web y en redes</small></span></div>
+        <div class="fi"><b>ANUNCIOS</b><span>En Google <strong>sale antes la competencia</strong><small>→ <strong>Anuncios en tu zona</strong> para que te encuentren a ti</small></span></div>
+        <div class="fi"><b>REDES</b><span>Tus redes llevan <strong>tiempo paradas</strong><small>→ <strong>Publicamos por ti</strong>, sin quitarte tiempo</small></span></div>
+        <div class="fi"><b>REDES</b><span>Tu web y tus redes <strong>no cuentan lo mismo</strong><small>→ <strong>Un solo mensaje</strong> en web, redes y Google</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="como">
+    <div class="wrap">
+      <p class="lbl big">Cómo trabajamos</p>
+      <h2 class="big">3 pasos.<br>El primero, <em>auditoría GRATIS</em>.</h2>
+      <div class="steps3">
+        <div class="step"><span class="n">01</span><h3>Auditoría <span class="chip">GRATIS</span></h3><p>Revisamos tu web, Google y redes como lo haría un cliente, y vemos por qué puedes estar <strong>perdiendo clientes</strong>.<br>Si te encaja lo que vemos, <strong>nos encargamos de todo</strong>.</p></div>
+        <div class="step"><span class="n">02</span><h3>Hoja de ruta <span class="chip">Sin compromiso</span></h3><p><strong>Qué</strong> cambiamos primero.<br><strong>Cómo</strong> lo hacemos.<br><strong>Cuánto</strong> cuesta, con precio cerrado.</p></div>
+        <div class="step"><span class="n">03</span><h3>Ejecución <span class="chip">Semanas, no meses</span></h3><p>Lo ponemos en marcha contigo y fijamos las <strong>métricas</strong> para medir que funciona.<br><strong>Nada por adelantado. Pagas cuando ves el trabajo terminado.</strong></p></div>
+      </div>
+      <div class="final">
+        <a class="btn" data-go href="#">Quiero mi auditoría gratis <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Crafted Partners · <span id="mailTxt"></span></span>
+    <nav><button data-legal="aviso">Aviso legal</button><button data-legal="privacidad">Privacidad</button></nav>
+  </div>
+</footer>
+
+
+<div class="modal" id="legal" role="dialog" aria-modal="true">
+  <div class="box"><button class="x" data-close-legal aria-label="Cerrar">×</button><h3 id="legalT"></h3><div id="legalB"></div></div>
+</div>
+
+<script>
+/* ===== CONFIGURACIÓN ===== */
+const WHATSAPP = "34619375751";
+const EMAIL = "hugo@craftedpartners.es";
+const TITULAR='Crafted Communications, S.L.', CIF='B88082169', DOMICILIO='Plaza de los Reyes Magos 13, 28007 Madrid';
+/* Si el enlace del email lleva ?n=Nombre%20del%20negocio, el WhatsApp sale con ese nombre */
+const NEG=(new URLSearchParams(location.search).get('n')||'').slice(0,80);
+
+const $=s=>document.querySelector(s);
+$('#yr').textContent=new Date().getFullYear();
+$('#mailTxt').textContent=EMAIL;
+/* ENDPOINT: URL de Google Apps Script (archivo 12). Vacío = vista previa (no avisa a nadie). */
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbwU3slN7ax-m5kVRKYW2CqWXsMwvykFcRG1jemk3ipjK5lgDKAL7UvVI61uCj_EF9Va/exec";
+const ID=(new URLSearchParams(location.search).get('id')||'').slice(0,40);
+(function(){const ps=[...document.querySelectorAll('.p')];
+  const sel=()=>ps.filter(p=>p.getAttribute('aria-pressed')==='true').map(p=>p.textContent.trim());
+  const msg=(extra)=>(NEG?`Hola, soy de ${NEG}. `:'Hola. ')+(sel().length?'Me pasa esto: '+sel().join(' · ')+'. ':'')+(extra||'Quiero la auditoría gratis de mi negocio.');
+  const wa=t=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+  const mail=t=>`mailto:${EMAIL}?subject=${encodeURIComponent('Auditoría gratis')}&body=${encodeURIComponent(t)}`;
+  const upd=()=>{$('#painMail').href=mail(msg());$('#askWa').href=wa(msg());$('#askMail').href=mail(msg());
+    $('#okWa').href=wa(msg('Ya he pedido la auditoría en la web. Prefiero que me contactéis por aquí.'));
+    $('#okCall').href=wa(msg('Ya he pedido la auditoría en la web. Prefiero que me llaméis. Mi teléfono es: '));};
+  ps.forEach(p=>p.addEventListener('click',()=>{p.setAttribute('aria-pressed',p.getAttribute('aria-pressed')!=='true');upd();}));upd();
+  const show=(id,btn)=>{['okBox','askBox'].forEach(x=>$('#'+x).hidden=x!==id);const el=$('#'+id);const host=btn.closest('.final,.ctas');host.insertAdjacentElement('afterend',el);el.scrollIntoView({behavior:'smooth',block:'nearest'});};
+  document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();
+    if(!(ID||NEG)){show('askBox',a);return;}
+    const d={id:ID,negocio:NEG,dolores:sel().join(' | '),fecha:new Date().toISOString(),pagina:location.href};
+    if(ENDPOINT){fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)}).catch(()=>{});}
+    else console.info('[vista previa] aviso no enviado',d);
+    show('okBox',a);}));
+})();
+document.querySelectorAll('[data-mail]').forEach(a=>{a.href=`mailto:${EMAIL}?subject=${encodeURIComponent('Auditoría gratis')}`;});
+
+const LEGAL={
+  aviso:{t:'Aviso legal',h:`<p>En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI), se informa de que este sitio web es titularidad de:</p>
+    <p><b>Titular:</b> ${TITULAR}<br><b>CIF:</b> ${CIF}<br><b>Domicilio social:</b> ${DOMICILIO}<br><b>Email:</b> ${EMAIL}</p>
+    <p>Crafted Partners es la marca comercial con la que el titular presta servicios de consultoría digital a empresas.</p>
+    <p>Los contenidos de este sitio son propiedad del titular. No se permite su reproducción sin autorización.</p>`},
+  privacidad:{t:'Política de privacidad',h:`<p><b>Responsable:</b> ${TITULAR}, CIF ${CIF}, ${DOMICILIO}. Email: ${EMAIL}.</p>
+    <p><b>Datos que tratamos:</b> los que nos facilitas al escribirnos por email o WhatsApp (nombre, datos de contacto, datos de tu negocio y el contenido de tu mensaje). Esta web no usa formularios ni cookies de seguimiento.</p>
+    <p><b>Finalidad:</b> atender tu solicitud, preparar la auditoría de tu negocio y contactarte en relación con ella.</p>
+    <p><b>Base jurídica:</b> la aplicación de medidas precontractuales a petición tuya (art. 6.1.b RGPD).</p>
+    <p><b>Conservación:</b> mientras dure la relación o hasta que pidas su supresión.</p>
+    <p><b>Destinatarios:</b> no se ceden datos a terceros, salvo obligación legal o proveedores necesarios para prestar el servicio (por ejemplo, alojamiento y correo).</p>
+    <p><b>Derechos:</b> acceso, rectificación, supresión, oposición, limitación y portabilidad, escribiendo a ${EMAIL}. Puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>`}
+};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-legal]');if(!b)return;e.preventDefault();
+  const d=LEGAL[b.dataset.legal];$('#legalT').textContent=d.t;$('#legalB').innerHTML=d.h;$('#legal').classList.add('open');});
+$('#legal').addEventListener('click',e=>{if(e.target.id==='legal'||e.target.closest('[data-close-legal]'))$('#legal').classList.remove('open');});
+addEventListener('keydown',e=>{if(e.key==='Escape')$('#legal').classList.remove('open');});
+
+
+
+</script>
+</body>
+</html>
